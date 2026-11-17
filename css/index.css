@@ -1,0 +1,601 @@
+header nav{
+    z-index: 2;
+    width: 100%;
+}
+header nav.navbar .navbar-toggler{
+    column-gap: 20px;
+}
+header nav .nav-link{
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+header nav .nav-link::before ,
+header nav .nav-link span.shape ,
+header nav .nav-link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: calc(100%/3);
+    position: absolute;
+    background-color: var(--bs-success);
+    transition-duration: .5s;
+    padding: 0;
+
+}
+header nav .nav-link::before{
+    top: 0;
+    left: -100%;
+}
+header nav .nav-link:hover:before{
+    left: 0;
+
+}
+header nav .nav-link span.shape{
+    top: calc(100%/3);
+    right: -100%;
+}
+header nav .nav-link:hover span.shape{
+    right: 0%;
+}
+header nav .nav-link::after{
+    bottom: 0;
+    left: -100%;
+}
+header nav .nav-link:hover:after{
+    left: 0%;
+
+}
+header nav .nav-link span.text{
+    position: relative;
+    z-index: 2;
+}
+
+header #carouselExampleCaptions .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+}
+header .carousel-inner .carousel-item {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header .carousel-inner .carousel-item::before{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header .carousel-inner .carousel-item .carousel-caption{
+    position: initial;
+}
+header .carousel-inner .carousel-item .carousel-caption > *{
+    transform: translateY(-30px);
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+header .carousel-inner .carousel-item.active .carousel-caption >*{
+    opacity: 1;
+    transform: translate(0px);
+}
+header .carousel-inner .carousel-item .carousel-caption .buttons a {
+    position: relative;
+    overflow: hidden;
+    color: var(--bs-success);
+}
+header #carouselExampleCaptions .carousel-inner .carousel-item:nth-of-type(1){
+
+/*banner 1234*/
+    background-image: url("../images/images_Kaffa/images_Kaffa/banner1.jpg");
+
+}
+header #carouselExampleCaptions .carousel-inner .carousel-item:nth-of-type(2){
+    
+     background-image: url("../images/images_Kaffa/images_Kaffa/banner2.jpg");
+
+}
+header #carouselExampleCaptions .carousel-inner .carousel-item:nth-of-type(3){
+     background-image: url("../images/images_Kaffa/images_Kaffa/banner3.jpg");
+
+
+}
+header #carouselExampleCaptions .carousel-inner .carousel-item:nth-of-type(4){
+     background-image: url("../images/images_Kaffa/images_Kaffa/banner4.jpg");
+
+}
+header .carousel-inner .carousel-item .carousel-caption p{
+    letter-spacing:  1.5; 
+    transition-delay: .2;
+    width: 75%;
+}
+header .carousel-inner .carousel-item .carousel-caption .buttons{
+    transition-delay: .4;
+}
+header .carousel-inner .carousel-item .carousel-caption .buttons a::before,
+header .carousel-inner .carousel-item .carousel-caption .buttons a::after 
+    {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        border: 21px solid;
+        border-top-color: var(--bs-success);
+        border-right-color:var(--bs-success) ;
+        border-bottom-color:var(--bs-success);
+        border-left-color:var(--bs-success);
+        transition-duration: .5s;
+
+}
+header .carousel-inner .carousel-item .carousel-caption .buttons a {
+    position: relative;
+    overflow: hidden;
+    color: var(--bs-success);
+}
+header .carousel-inner .carousel-item .carousel-caption .buttons a::before{
+    left: -100%;
+    border-right-color: transparent;
+}
+header .carousel-inner .carousel-item .carousel-caption .buttons a:hover::before{
+    left: 0%;
+}
+header .carousel-inner .carousel-item .carousel-caption .buttons a::after{
+    right: -100%;
+    border-left-color:transparent;
+}
+header .carousel-inner .carousel-item .carousel-caption .buttons a:hover::after{
+    right: 0%;
+}header .carousel-inner .carousel-item .carousel-caption .buttons a span{
+    position: relative;
+    z-index: 2;
+}
+
+header .carousel-inner .carousel-item .carousel-caption .buttons a:hover span{
+    color: #fff;
+
+}
+header .carousel-inner .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+#About {
+    background-color: var(--bs-success);
+    background-image: url(../images/images_Kaffa/images_Kaffa/leaves_pattern.png);
+    background-size: cover;
+}
+
+#About .part1 button {
+    position: relative;
+    overflow: hidden;
+    color: var(--bs-success);
+    z-index: 1;
+}
+
+#About .part1 button::before,
+#About .part1 button::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    transition: transform 0.5s ease;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#About .part1 button::before {
+    top: 0;
+    transform: translateY(-100%);
+}
+
+#About .part1 button::after {
+    bottom: 0;
+    transform: translateY(100%);
+}
+#About .part1 button:hover::before,
+#About .part1 button:hover::after {
+    transform: translateY(0);
+}
+#About .part1 button:hover .text {
+    color:var(--bs-success);
+    transition-duration: 0.5s;
+}
+
+#About .part1 button:hover {
+    color: #fff;
+}
+#About .part2 .box .specialCard {
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+   
+}
+#About .part2 .box:nth-of-type(1) .specialCard .body{
+    background-color: #404042;
+}
+#About .part2 .box .specialCard .front{
+    
+    backface-visibility: hidden;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+     transition-duration: 1s;
+     border-radius: 5px;
+     overflow: hidden;
+}
+#About .part2 .box:nth-of-type(1) .specialCard .front{
+    background-image: url(../images/images_Kaffa/images_Kaffa/about_front_01.jpg);
+
+}
+#About .part2 .box:nth-of-type(2) .specialCard .front{
+    background-image: url(../images/images_Kaffa/images_Kaffa/about_front_02.jpg);
+
+}
+#About .part2 .box:nth-of-type(3) .specialCard .front{
+    background-image: url(../images/images_Kaffa/images_Kaffa/about_front_03.jpg);
+
+}
+#About .part2 .box .specialCard:hover .front{
+    transform: rotateY(180deg);
+}
+#About .part2 .box .specialCard .back{
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+     transition-duration: 1s;
+     overflow: hidden;
+}
+#About .part2 .box .specialCard:hover .back{
+    transform: rotateY(0deg);
+}
+#About .part2 .box:nth-of-type(2) .specialCard .body{
+    background-color: #887748;
+}
+#About .part2 .box:nth-of-type(3) .specialCard .body{
+    background-color: #6D1F37;
+}
+#About .part2 .box .specialCard .body button{
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 15px;
+
+}
+#About .part2 .box:nth-of-type(1) .specialCard .body a:hover{
+    color: #404042;
+}
+
+#About .part2 .box:nth-of-type(2) .specialCard .body a:hover{
+    color: #887748;
+}
+#About .part2 .box:nth-of-type(3) .specialCard .body a:hover{
+    color: #6D1F37;
+}
+#About .part2 .box .specialCard .body a:hover{
+    background-color: #fff;
+}
+#About .part2 .box .specialCard .body a i{
+    transition-duration: 0.5s;
+}
+#About .part2 .box .specialCard .body a:hover i{
+    margin-left: 5px;
+}
+#Services{
+    background-image: url(../images/images_Kaffa/images_Kaffa/beans_bg.jpg);
+    position: relative;
+    background-size: contain;
+    background-attachment: fixed;
+}
+#Services::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+#Services .content img{
+    animation: animate_1 0.2s linear infinite alternate;
+
+}
+
+#Menu{
+    background-color: #4d8b55;
+    background-image: url(../images/images_Kaffa/images_Kaffa/leaves_pattern.png);
+    background-size: cover;
+    color: #fff;
+}
+#Menu .cover{
+    overflow: auto;
+}
+#Menu .cover ul.nav{
+    width: max-content;
+    margin: auto;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+#Menu .cover ul.nav li.nav-item:not(:last-child){
+    margin-right: 15px;
+}
+#Menu .cover ul.nav li.nav-item button{
+    background-color: transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    transition-duration: .5s;
+}
+#Menu .cover ul.nav li.nav-item button.active,
+#Menu .cover ul.nav li.nav-item button:hover{
+    background-color: #fff;
+    color: #4d8b55;
+}
+#Menu #pills-tabContent .item{
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    transform: scale(0);
+}
+#Menu #pills-tabContent .tab-pane.show .item{
+    transform: scale(1);
+    transition-duration: 1s;
+}
+#Menu #pills-tabContent .item img{
+    transform: scale(.8);
+    transition-duration: 1s;
+}
+#Menu #pills-tabContent .item:hover img{
+    transform: scale(1);
+}
+#Menu #pills-tabContent .item h6,
+#Menu #pills-tabContent .item p{
+    position: absolute;
+    left: 0;
+    background-color: #4d8b55;
+    background-image: url(../images/images_Kaffa/images_Kaffa/leaves_pattern.png);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translate(-100%);
+    transition-duration: 1s;
+}
+#Menu #pills-tabContent .item h6{ top: 10px; padding: 5px;
+font-size:clamp(18px,2.2vw,26px) }
+#Menu #pills-tabContent .item p{ bottom: 10px; padding: 5px 10px; }
+#Menu #pills-tabContent .item:hover h6,
+#Menu #pills-tabContent .item:hover p{
+    transform: translate(0);
+}
+#Beans-Coffee {
+    background-color: #4d8b55;
+    background-image: url(../images/images_Kaffa/images_Kaffa/ice_drinks_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Beans-Coffee h2{
+    text-shadow: 10px 10px 10px #000;
+}
+#Beans-Coffee::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+#Beans-Coffee .i{
+    cursor: pointer;
+}
+.modal .modal-dialog{
+    margin: none;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+.modal .modal-content {
+    width: 650px;
+    height: 400px;
+}
+.modal .modal-content video{
+    border-radius: 5px;
+}
+#ContactUs{
+    background-image: url("../images/images_Kaffa/images_Kaffa/black-bg.png");
+}
+#ContactUs form{
+    background-color: var(--bs-success);
+    padding: 20px 40px; 
+    border-radius: 10px;
+    background-image: url("../images/images_Kaffa/images_Kaffa/leaves_pattern.png");
+    background-position: center;
+    width: 500px;
+}
+textarea{
+    resize: none;
+}
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0px;
+}
+footer p{
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 1300px) {
+  header nav.navbar .navbar-nav {
+    background-color: black;
+    text-align: center;
+    justify-content: center;
+      column-gap: 0px;
+      row-gap: 10px;
+      padding: 15px 0px;
+  }
+  header nav.navbar .navbar-toggler {
+    border-color: var(--bs-success);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    padding: 0;
+    
+  
+  }
+  header nav.navbar .navbar-toggler span {
+    display: block;
+    width: 60%;
+    height: 3px;
+    background-color: var(--bs-success);
+
+  }
+  header .carousel-inner .carousel-item .carousel-caption p {
+    width: 100%;
+  }
+}
+header nav.navbar .navbar-toggler:focus{
+    box-shadow: none;
+
+}
+#About .part2 .box .specialCard{
+    max-width: 280px;
+    margin: auto;
+}
+
+
+.modal .modal-content  {
+    width: 480px;
+   
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+ .modal .modal-content  {
+    width: 280px;
+   
+}
+}
+
+@media (min-width: 577px) and (max-width: 1300px) {
+    #About .part2 .box .specialCard{
+        width: initial;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1300px) {
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+     header nav.navbar .navbar-nav {
+    background-color: transparent;
+}
+ header nav.navbar .navbar-toggler {
+    display: none;
+ }
+}
+@media (min-width: 1181px) and (max-width: 1300px) {
+}
+
+
+#ContactUs form .btn-dark {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #212529;
+  border: 1px solid transparent;
+  color: #fff;
+  letter-spacing: 1.5px;
+  transition: border-color .5s ease, transform .15s ease;
+}
+#ContactUs form .btn-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #4d8b55;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform .5s ease;
+  z-index: -1;
+}
+#ContactUs form .btn-dark:hover,
+#ContactUs form .btn-dark:focus-visible {
+  background-color: #212529;
+  border-color: #fff;
+  color: #fff;
+}
+#ContactUs form .btn-dark:hover::before,
+#ContactUs form .btn-dark:focus-visible::before {
+  transform: scaleY(1);
+}
+#ContactUs form .btn-dark:active {
+  transform: scale(.97);
+  border-color: #fff;
+  color: #fff;
+}
+
+
+#ContactUs form {
+  width: 100%;
+  max-width: 500px;
+  margin-inline: auto;
+}
+@media (max-width: 575.98px) {
+  #ContactUs form { padding: 20px; }
+}
+
+
+.modal .modal-content {
+  width: min(650px, 92vw);
+  height: auto;
+}
+.modal .modal-content video {
+  width: 100%;
+  height: auto;
+}
+
+#ContactUs .form-control {
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+#ContactUs .form-control:focus {
+  border-color: #212529;
+  box-shadow: 0 0 0 .25rem rgba(33, 37, 41, .45);
+}
